@@ -42,7 +42,8 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  float: right;
+  padding-top: 10px;
+  padding-left: 25px;
 }
 
 .past {
