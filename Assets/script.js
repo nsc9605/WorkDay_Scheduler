@@ -29,12 +29,11 @@ console.log(timeBlock);
 timeBlock.each(function(index, value) {
     console.log(`div${index}: ${this.id}`);
 
-    // for (index = 0; index <= timeBlock.length; index++) {
+    
         // console.log(index)
         var id = "hour" + index;
-        // var timeBlock = $(id)
+        var timeBlock = $(id)
         // console.log(index)
-        // var id = "hour" + index;
         if (index < currentHour) {
             $(this).addClass("past");
         }
@@ -46,10 +45,22 @@ timeBlock.each(function(index, value) {
 }       
 )
 // save to local storage
-$("button").on("click", save)
+// for (index = 0; index <= timeBlock.length; index++) {
+    // var rows = $("<div>").addClass("row");
+    // var hours = $("<div>").addClass("hour");
+    var tasks = $("<textarea>").addClass("col-md-10");
+    // var save = $("<button>").text("Save").addClass("saveBtn");
+    
+    // rows.append(hours,tasks,save)
+    // $(".container").append(rows)
+// }
 
+var tasks = JSON.parse(localStorage.getItem("tasks"))
+// $("textarea").on("")
+
+$("button").on("click", save);
 function save() {
-    console.log($(this).siblings(textarea).val());
+    // console.log($(this).siblings(textarea).val());
 localStorage.setItem("text", JSON.stringify(text));
 }
 
