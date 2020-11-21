@@ -6,65 +6,76 @@ const present = $(".present");
 const future = $(".future");
 const timeBlock = $(".time-block");
 const saveButton = $(".saveBtn");
+const description = $(".description");
+
+
 
 // Set current time in header when application is opened
 $(document).ready(function () {
-    var today = moment();
-    $("#currentDay").text(today.format("dddd MMMM Do YYYY, h:mm a"));
+  var today = moment();
+  $("#currentDay").text(today.format("dddd MMMM Do YYYY, h:mm a"));
 
-    var hours = today.hours();
-    console.log(hours);  
-})
+  var hours = today.hours();
+  console.log(hours);
+});
 
+var parent = $(this).parents(".row");
+var timeId = parseInt(parent.attr("id"));
+var currentHour = parseInt(moment().format("H"));
 
 // set variable for current hour for color coding purposes
-var currentHour = moment().format('H');
-console.log(currentHour);
-
 let index = 0;
 
 console.log(timeBlock);
 
-// function to change color of textarea based on current time of the day
-timeBlock.each(function(index, value) {
-    console.log(`div${index}: ${this.id}`);
+timeBlock.each(function () {
+  for (i = 0; i < 9; i++) {
+    var parent = $(this).parents(".row");
+    var timeId = parseInt(parent.attr("id"));
+    var currentHour = parseInt(moment().format("H"));
 
-    
-        // console.log(index)
-        var id = "hour" + index;
-        var timeBlock = $(id)
-        // console.log(index)
-        if (index < currentHour) {
-            $(this).addClass("past");
-        }
-        else if (index > currentHour) {
-            $(this).addClass("present");
-        }
-        else (index == currentHour) 
-            $(this).addClass("future");
-}       
-)
-// save to local storage
-// for (index = 0; index <= timeBlock.length; index++) {
-    // var rows = $("<div>").addClass("row");
-    // var hours = $("<div>").addClass("hour");
-    var tasks = $("<textarea>").addClass("col-md-10");
-    // var save = $("<button>").text("Save").addClass("saveBtn");
-    
-    // rows.append(hours,tasks,save)
-    // $(".container").append(rows)
-// }
+    if (timeId < currentHour) {
+      $(this).addClass("past");
 
-var tasks = JSON.parse(localStorage.getItem("tasks"))
-// $("textarea").on("")
+    } else if (timeId === currentHour) {
+        $(this).removeClass("past");
+      $(this).addClass("present");
+      
+    } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+    $(this).addClass("future");
+  }}
+});
 
-$("button").on("click", save);
-function save() {
-    // console.log($(this).siblings(textarea).val());
-localStorage.setItem("text", JSON.stringify(text));
+
+    localStorage.setItem("save", saveBtn);
+
+//     var description = $(".description").val();
+//     var rows = $(".row").value;
+//     var hours = $(".hour").value;
+    var text = $(".text").value;
+    // var save = $(".save").value;
+//     row.append(hours, text, save);
+//     $(".container").append(row);
+// })
+
+$("button").on("click", saveBtn)
+
+function saveBtn() {
+    localStorage.setItem("text", text);
 }
 
 
-// add event listeners
+// // renderLastRegistered to keep information
+// function renderTasks ()
 
-// Function to save typed information
+
+// save to local storage
+
+
+// $("button").on("click", save);
+// function save() {
+//     // console.log($(this).siblings(textarea).val());
+// localStorage.setItem("text", JSON.stringify(text));
+// }
