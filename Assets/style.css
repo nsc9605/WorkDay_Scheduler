@@ -36,6 +36,8 @@ textarea{
 
 .row {
   white-space: pre-wrap;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
   height: 80px;
   border-top: 1px solid white;;
 }
@@ -58,17 +60,17 @@ textarea{
 
 .past {
   background-color: rgba(223, 202, 223, 0.87);
-  color: grey;
+  color: darkred;
 }
 
 .present {
   background-color: #f4f5a8;
-  color: grey;
+  color: darkred;
 }
 
 .future {
   background-color: #bee8ee;
-  color: grey;
+  color: darkred;
 }
 
 .saveBtn {
