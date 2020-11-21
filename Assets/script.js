@@ -7,7 +7,8 @@ const future = $(".future");
 const timeBlock = $(".time-block");
 const saveButton = $(".saveBtn");
 const description = $(".description");
-
+const hourTask = $("id");
+const userText = $(".hour-task-text");
 
 
 // Set current time in header when application is opened
@@ -29,7 +30,7 @@ let index = 0;
 console.log(timeBlock);
 
 timeBlock.each(function () {
-  for (i = 0; i < 9; i++) {
+
     var parent = $(this).parents(".row");
     var timeId = parseInt(parent.attr("id"));
     var currentHour = parseInt(moment().format("H"));
@@ -46,27 +47,50 @@ timeBlock.each(function () {
         $(this).removeClass("present");
     $(this).addClass("future");
   }}
-});
+);
 
 
-    localStorage.setItem("save", saveBtn);
 
-//     var description = $(".description").val();
-//     var rows = $(".row").value;
-//     var hours = $(".hour").value;
-    var text = $(".text").value;
-    // var save = $(".save").value;
-//     row.append(hours, text, save);
-//     $(".container").append(row);
-// })
-
-$("button").on("click", saveBtn)
-
+$(".save").on("click", saveBtn)
 function saveBtn() {
-    localStorage.setItem("text", text);
+  console.log($(this));
 }
 
+$(".save").on("click", function() {
+     // the save button we are clicking on
+     console.log($(this))
+   
+    var userText = $("#hour-task-text").val();
+    console.log(userText);
 
+    if(!localStorage.getItem(userText)) {
+       localStorage.setItem(userText, JSON.stringify(userText));
+    }
+    //  // use jQuery to find this is hour
+     var hourTask = $(this).attr("id").val();
+    // // is this value correct?
+    // console.log(hourTask)
+
+    //  // use jQuery to find this is text content
+    // // <- need to get the text content from here
+     var text = $(this).siblings("hour-task").val(); 
+        console.log(text)
+   
+// don't do this yet until you know we're doing the above correctly
+localStorage.setItem(hourTask, userText);
+localStorage.setItem(hourTask, JSON.stringify(text));
+     // send it to localStorage
+     // localStorage.setItem(hourTask, text)
+   
+   })
+
+// function hourTask(text) {
+
+// }
+// function saveBtn(event) {
+//     console.log(event.target);
+//     localStorage.setItem("text", text);
+// }
 // // renderLastRegistered to keep information
 // function renderTasks ()
 
@@ -78,4 +102,4 @@ function saveBtn() {
 // function save() {
 //     // console.log($(this).siblings(textarea).val());
 // localStorage.setItem("text", JSON.stringify(text));
-// }
+// )
