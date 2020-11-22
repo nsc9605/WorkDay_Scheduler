@@ -22,24 +22,18 @@ VS Code
 
 
 ## Usage/Demo Screenshot
+ 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+![WorkDay_Scheduler](/Users/nikicatapano/UNCC Homework/WorkDay_Scheduler/assets/images/demo_shot.png)
 
-![Title of Document](Link-to-document.png)
 
 ## Credits
 
 List your collaborators, if any, with links to their GitHub profiles.
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
-If you followed tutorials, include links to those here as well.
 
 [Name of Youtube Tutorial](www.youtube.com)
-
-## Contributing
-
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
 
 
 ## License
