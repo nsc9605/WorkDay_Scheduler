@@ -25,7 +25,7 @@ VS Code
 
 ## Usage/Demo Screenshot
  
-![WorkDay_Scheduler](//Assets/images/work_demo.gif)
+![WorkDay_Scheduler](/Assets/images/work_demo.gif)
 
 
 ## Credits
