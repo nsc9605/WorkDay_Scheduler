@@ -25,19 +25,26 @@ VS Code
 
 ## Usage/Demo Screenshot
  
-![WorkDay_Scheduler](Work-Day-Scheduler.gif)
+![WorkDay_Scheduler](//Assets/images/work_demo.gif)
 
 
 ## Credits
 
 •[Storing Objects with Local Storage in JavaScript](https://youtu.be/AUOzvFzdIk4)
+
 •[jQuery .each()](https://www.sitepoint.com/jquery-each-function-examples/)
+
 •[Moment.js](https://momentjs.com/) 
+
 •[Bootsrap](https://getbootstrap.com/)
+
 •[jQuery](https://api.jquery.com/)
 
+
 Tutor/Teach Assistant Help
+
 •[Mazin Abed](mazin_a_abd@yahoo.com)
+
 •Jon Jackson
 
 
