@@ -16,7 +16,7 @@ $(document).ready(function () {
   $("#currentDay").text(today.format("dddd MMMM Do YYYY, h:mm a"));
 
   var hours = today.hours();
-  console.log(hours);
+//   console.log(hours);
 });
 
 // Set variables for time/parent/current hour to refer to when change
@@ -28,7 +28,7 @@ var currentHour = parseInt(moment().format("H"));
 // set variable for current hour for color coding purposes
 let index = 0;
 
-console.log(timeBlock);
+// console.log(timeBlock);
 
 // Function to argue past/present/future time and what to log and when.
 timeBlock.each(function () {
@@ -60,14 +60,16 @@ timeBlock.each(function () {
 $(".saveBtn").on("click", function() {
  
   var userText = $(this).siblings(".time-block").val();
-  // console.log(userText);
+//   console.log(userText);
   
   var hourTask = $(this).parents(".row").attr("id");
   //is this value correct?
-  // console.log(hourTask)
+//   console.log(hourTask)
 
 // Send to localStorage
 localStorage.setItem(hourTask, userText);
 
-console.log(localStorage.getItem(hourTask, userText))
+// console.log(localStorage.getItem(hourTask, userText))
+
+console.log("+++ Get Item from Local Storage: ", localStorage.getItem(hourTask))
 })
